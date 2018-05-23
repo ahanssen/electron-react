@@ -1,0 +1,36 @@
+{
+  "name": "electron-react",
+  "version": "1.0.0",
+  "description": "A minimal Electron application using React",
+  "main": "main.js",
+  "scripts": {
+    "prestart": "cd ui && npm run start",
+    "build" : "sh build-ui.sh",
+    "start": "electron .",
+    "electron-start" : "node ./electron-wait-for-react"
+  },
+  "build" : {
+    "appId" : "com.electron.electron-react",
+    "win" : {
+      "iconUrl": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-256.png"
+    },
+    "directories": {
+      "buildResources": "compiled"
+    }
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "React",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-builder": "^20.14.7"
+  }
+}
