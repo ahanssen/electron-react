@@ -1,70 +1,28 @@
-import React, { Component } from 'react';
-import { createStore, applyMiddleware, compose } from "redux";
+import React, { PureComponent } from 'react';
 import { Provider } from "react-redux";
-import {
-  Route,
-  Redirect,
-  Switch
-} from "react-router-dom";
-import { ConnectedRouter, routerMiddleware } from "react-router-redux";
-import createHistory from "history/createBrowserHistory";
-import ReduxThunk from "redux-thunk";
 import { MuiThemeProvider } from "material-ui";
+import { configureStore, history } from './store';
 
-import Reducers from "./reducers";
-import Urls from "./constants/urls";
-
+import Routes from "./routes";
 import './App.css';
 
-const history = createHistory();
+import AppBar from "./components/app-bar";
 
-const store = createStore(
-  Reducers,
-  {},
-  compose(
-    applyMiddleware(
-      ReduxThunk,
-      routerMiddleware(history)
-    )
-  )
-);
+const store = configureStore();
 
-class App extends Component {
-
-  getRoutes() {
-    const routesList = [];
-    Urls.forEach( (value, index) => {
-      if (value.redirect) {
-        routesList.push(
-          <Redirect to={value.to} key={index} />
-        );
-        return;
-      }
-
-      routesList.push(
-        <Route {...value} key={index} />
-      );
-    });
-    return routesList;
-  }
-
+class App extends PureComponent {
 
   render() {
-    /*if you wanna custom muiThemeProvider /**/
-    const routes = this.getRoutes();
     return (
       <Provider store={store}>
-        <ConnectedRouter history={history}>
-          <MuiThemeProvider>
-            <div>
-              <div className="routes">
-                <Switch>
-                  {routes}
-                </Switch>
-              </div>
+        <MuiThemeProvider>
+          <div>
+            <AppBar />
+            <div className="routes">
+              <Routes history={history} />
             </div>
-          </MuiThemeProvider>
-        </ConnectedRouter>
+          </div>
+        </MuiThemeProvider>
       </Provider>
     );
   }

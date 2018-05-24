@@ -1,0 +1,23 @@
+.app-bar {
+  background: #069 !important;
+}
+.app-bar .app-bar-title {
+  color: white !important;
+  cursor: pointer;
+}
+.app-bar .menu {
+  color: white;
+  padding: 0;
+  list-style: none !important;
+  display: flex;
+}
+.app-bar .menu li {
+  align-items: center;
+  justify-content: center;
+}
+.app-bar .menu .user-info .login-button div {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

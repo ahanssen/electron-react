@@ -14,7 +14,6 @@
     "build-dist": "sh build-ui.sh"
   },
   "build": {
-    "asarUnpack": "**/static/**/*",
     "appId": "com.electron.electron-react",
     "files": [
       {
@@ -28,10 +27,7 @@
       "package.json",
       "main.js",
       "renderer.js"
-    ],
-    "directories": {
-      "buildResources": "resources"
-    }
+    ]
   },
   "repository": "https://github.com/rcbitencourt/electron-react",
   "keywords": [

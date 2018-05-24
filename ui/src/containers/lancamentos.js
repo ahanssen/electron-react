@@ -6,9 +6,9 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home">
+      <div className="lancamentos">
         <Paper className="content">
-          <h1>Seja bem vindo ao Electron</h1>
+          <h1>Lançamentos</h1>
         </Paper>
       </div>
     );
