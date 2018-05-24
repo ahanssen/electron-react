@@ -2,11 +2,11 @@
 Electron App using React
 
 
-## troubleshooting
+### Troubleshooting
 
-# For FSWatcher error on starting
+#### For FSWatcher error on starting
 
-Check out this link to know how to fix it.
+Check out these links to know how to fix it.
 
 https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details
 
