@@ -1,23 +1,19 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 import {
-  BrowserRouter as Router,
   Route,
   Redirect,
   Switch
 } from "react-router-dom";
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from "react-router-redux";
+import { ConnectedRouter, routerMiddleware } from "react-router-redux";
 import createHistory from "history/createBrowserHistory";
-import { CookiesProvider } from 'react-cookie';
 import ReduxThunk from "redux-thunk";
+import { MuiThemeProvider } from "material-ui";
 
 import Reducers from "./reducers";
 import Urls from "./constants/urls";
 
-import PrivateRoute from "./components/global/private-route/private-route";
-
-import logo from './logo.svg';
 import './App.css';
 
 const history = createHistory();
@@ -29,12 +25,11 @@ const store = createStore(
     applyMiddleware(
       ReduxThunk,
       routerMiddleware(history)
-    ),
-    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
   )
 );
 
-class App extends PureComponent {
+class App extends Component {
 
   getRoutes() {
     const routesList = [];
@@ -42,13 +37,6 @@ class App extends PureComponent {
       if (value.redirect) {
         routesList.push(
           <Redirect to={value.to} key={index} />
-        );
-        return;
-      }
-
-      if (value.secure) {
-        routesList.push(
-          <PrivateRoute {...value} key={index} />
         );
         return;
       }
@@ -66,19 +54,17 @@ class App extends PureComponent {
     const routes = this.getRoutes();
     return (
       <Provider store={store}>
-        <CookiesProvider>
-          <ConnectedRouter history={history}>
-            <MuiThemeProvider>
-              <div>
-                <div className="routes">
-                  <Switch>
-                    {routes}
-                  </Switch>
-                </div>
+        <ConnectedRouter history={history}>
+          <MuiThemeProvider>
+            <div>
+              <div className="routes">
+                <Switch>
+                  {routes}
+                </Switch>
               </div>
-            </MuiThemeProvider>
-          </ConnectedRouter>
-        </CookiesProvider>
+            </div>
+          </MuiThemeProvider>
+        </ConnectedRouter>
       </Provider>
     );
   }

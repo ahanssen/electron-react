@@ -1,1 +1,5 @@
-renderer.js
+const renderer = () => {
+
+};
+
+export default renderer;

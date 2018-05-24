@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 
+import logo from '../logo.svg';
+
 class Home extends PureComponent {
   render() {
     return (
