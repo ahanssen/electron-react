@@ -7,10 +7,24 @@ Electron App using React
 The project is based on Electron and create-react-app scaffolding.
 You can develop based on create-react-app or Electron embbed application.
 
-To run the entire application, run the following commands:
+To run the entire application, install electron node modules on `root` folder, and `ui` node modules on folder:
 
 - `npm i`
 - `cd ui && npm i`
+
+Execute the following command on root folder:
+
+- `npm start`
+
+
+## Building app on Linux
+
+To run on Linux you just have to run `npm run build-pack` to create a local package. To run a distribution package run `npm run build-dist`
+
+## Building app on Windows
+
+To run on Linux you just have to run `npm run build-pack-win` to create a local package. To run a distribution package run `npm run build-dist-win`
+
 
 #### NPM Modules
 

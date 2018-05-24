@@ -11,7 +11,9 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "build-pack": "sh build-ui.sh pack",
-    "build-dist": "sh build-ui.sh"
+    "build-dist": "sh build-ui.sh",
+    "build-pack-win": "build-ui.bat pack",
+    "build-dist-win": "build-ui.bat"
   },
   "build": {
     "appId": "com.electron.electron-react",
