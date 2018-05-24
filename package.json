@@ -4,10 +4,11 @@
   "description": "A minimal Electron application using React",
   "main": "main.js",
   "scripts": {
-    "prestart": "cd ui && npm run start",
+    "start": "nf start -p 3000 -j ./Procfile",
     "build" : "sh build-ui.sh",
-    "start": "electron .",
-    "electron-start" : "node ./electron-wait-for-react"
+    "electron": "electron .",
+    "electron-start" : "node ./electron-wait-for-react",
+    "react-start" : "cd ./ui && npm run start"
   },
   "build" : {
     "appId" : "com.electron.electron-react",
@@ -18,7 +19,7 @@
       "buildResources": "compiled"
     }
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/rcbitencourt/electron-react",
   "keywords": [
     "Electron",
     "React",
