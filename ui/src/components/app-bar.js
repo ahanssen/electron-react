@@ -1,7 +1,6 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import { AppBar, FlatButton, Avatar, Popover, Menu, MenuItem, Divider } from "material-ui";
-import _ from "lodash";
+import { AppBar, FlatButton,  } from "material-ui";
 
 import { history } from "../store";
 

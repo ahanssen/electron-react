@@ -21,15 +21,7 @@ export default [
     component: Lancamentos
   },
   {
-    label: "Not found",
-    path: "/404",
-    exact: true,
-    strict: true,
-    pageTitle: defaultTitle.concat(" | my react app"),
-    component: NotFound
-  },
-  {
     redirect: true,
-    to: "/404"
+    to: "/"
   }
 ];

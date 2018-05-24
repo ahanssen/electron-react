@@ -10,4 +10,3 @@ if [ "$PACK_FILE" = "pack" ]; then
 else
 	cd $BASEDIR && npm i && npm run dist
 fi
-	

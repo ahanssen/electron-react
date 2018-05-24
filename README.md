@@ -2,6 +2,21 @@
 Electron App using React
 
 
+## Getting started
+
+The project is based on Electron and create-react-app scaffolding.
+You can develop based on create-react-app or Electron embbed application.
+
+
+#### NPM Modules
+
+You need to install the following node modules installed global:
+
+- foreman (for process integration)
+- create-react-app (for scaffolding)
+
+
+
 ### Troubleshooting
 
 #### For FSWatcher error on starting

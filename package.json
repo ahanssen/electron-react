@@ -27,7 +27,12 @@
       "package.json",
       "main.js",
       "renderer.js"
-    ]
+    ],
+    "win": {
+      "target": "nsis",
+      "legalTrademarks": "electron-react app",
+      "publisherName": "Rafael Bitencourt"
+    }
   },
   "repository": "https://github.com/rcbitencourt/electron-react",
   "keywords": [

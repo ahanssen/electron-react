@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import { Paper } from "material-ui";
 
 class Home extends Component {
@@ -9,6 +8,7 @@ class Home extends Component {
       <div className="lancamentos">
         <Paper className="content">
           <h1>Lançamentos</h1>
+          <a onClick={e => window.open()}>Abrir modal</a>
         </Paper>
       </div>
     );
