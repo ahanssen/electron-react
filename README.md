@@ -36,18 +36,6 @@ To run on Linux you just have to run `npm run build-pack` to create a local pack
 
 To run on Linux you just have to run `npm run build-pack-win` to create a local package. To run a distribution package run `npm run build-dist-win`
 
-<<<<<<< HEAD
-
-#### NPM Modules
-
-You need to install the following node modules installed global:
-
-- foreman (for process integration) `npm i foreman -g`
-- create-react-app (for scaffolding) `npm i create-react-app -g`
-
-
-=======
->>>>>>> 6eac9a63ca5462402047c970a9387cdf38fcff38
 ### Troubleshooting
 
 #### For FSWatcher error on npm start
