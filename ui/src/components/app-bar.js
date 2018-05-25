@@ -7,7 +7,8 @@ import { history } from "../store";
 import "./app-bar.css";
 
 const menuItems = [
-  { label: "Top 10 Clientes", url: "/top-10"}
+  { label: "Top 10 Clientes", url: "/top-10"},
+  { label: "System Info", url: "/system-info"}
 ];
 
 class AppBarHome extends PureComponent {

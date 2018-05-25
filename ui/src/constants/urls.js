@@ -1,5 +1,6 @@
 import Home from "../containers/home";
 import Top10 from "../containers/top10";
+import SystemInfo from "../containers/system-info";
 
 const defaultTitle = "electron";
 
@@ -18,6 +19,14 @@ export default [
     strict: true,
     pageTitle: defaultTitle.concat(" | top 10"),
     component: Top10
+  },
+  {
+    label: "System Info",
+    path: "/system-info",
+    exact: true,
+    strict: true,
+    pageTitle: defaultTitle.concat(" | system info"),
+    component: SystemInfo
   },
   {
     redirect: true,
