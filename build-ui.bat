@@ -1,13 +1,10 @@
 set PACK_FILE=%1
-set BASEDIR=%%~dpF
+set BASEDIR=%cd%
 
 cd ./ui && npm i && npm run build
 
-IF "%PACK_FILE"=="pack" goto buildpack
-IF "%PACK_FILE"!="pack" goto builddist
-
-:buildpack
-cd %BASEDIR% && npm i && npm run pack
-
-:builddist
-cd %BASEDIR% && npm i && npm run dist
+IF "%PACK_FILE%"=="pack" (
+  cd "%BASEDIR%" && npm i && npm run pack
+) ELSE (
+  cd "%BASEDIR%" && npm i && npm run dist
+)
