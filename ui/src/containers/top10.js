@@ -40,14 +40,14 @@ class Top10 extends Component {
 
   getList() {
     return (
-      <Table>
-        <TableHeader>
+      <Table selectable={false}>
+        <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
           <TableRow>
             <TableHeaderColumn>ID</TableHeaderColumn>
             <TableHeaderColumn>Name</TableHeaderColumn>
           </TableRow>
         </TableHeader>
-        <TableBody>
+        <TableBody displayRowCheckbox={false}>
           {
               this.state.data.map( (cliente, index) => {
                 return <TableRow key={index}>
