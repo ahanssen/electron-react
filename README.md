@@ -1,7 +1,6 @@
 # electron-react
 Electron App using React
 
-
 ## Requirements
 
 This entire application was developed on `Node@8.x` and `npm@5.x`.

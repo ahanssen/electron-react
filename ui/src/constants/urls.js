@@ -1,6 +1,5 @@
 import Home from "../containers/home";
-import Lancamentos from "../containers/lancamentos";
-import NotFound from "../containers/not-found";
+import Top10 from "../containers/top10";
 
 const defaultTitle = "electron";
 
@@ -13,12 +12,12 @@ export default [
     component: Home
   },
   {
-    label: "Lançamentos",
-    path: "/lancamentos",
+    label: "Top 10 Clientes",
+    path: "/top-10",
     exact: true,
     strict: true,
-    pageTitle: defaultTitle.concat(" | lançamentos"),
-    component: Lancamentos
+    pageTitle: defaultTitle.concat(" | top 10"),
+    component: Top10
   },
   {
     redirect: true,

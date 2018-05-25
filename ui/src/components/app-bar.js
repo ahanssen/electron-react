@@ -6,6 +6,10 @@ import { history } from "../store";
 
 import "./app-bar.css";
 
+const menuItems = [
+  { label: "Top 10 Clientes", url: "/top-10"}
+];
+
 class AppBarHome extends PureComponent {
 
   getTitle() {
@@ -19,9 +23,15 @@ class AppBarHome extends PureComponent {
   getRight() {
     return (
       <ul className="menu">
-        <li className="user-info">
-          <FlatButton label="Lançamentos" className="nav-button" onClick={e => history.push("/lancamentos")} />
-        </li>
+        {
+          menuItems.map( (menu, index) => {
+            return (
+              <li className="user-info" key={index}>
+                <FlatButton label={menu.label} className="nav-button" onClick={e => history.push(menu.url)} />
+              </li>
+            )
+          })
+        }
       </ul>
     );
   }
